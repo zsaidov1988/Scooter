@@ -1,0 +1,99 @@
+/* HEADER SECTION */
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  background-color: #ffffff;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 22px;
+  padding-bottom: 21px;
+}
+
+.header__toggler-btn {
+  display: none;
+  background-color: transparent;
+  border: none;
+}
+
+.header__toggler-img {
+  display: block;
+  width: 20px;
+  height: 16px;
+}
+
+.header__logo-link {
+  @include link-unstyled;
+  display: inline-block;
+}
+
+.header__logo-img {
+  display: block;
+  width: 108px;
+  height: 28px;
+}
+
+.header__menu-mobile {
+  display: none;
+  width: 256px;
+  height: calc(100vh - 102px);
+  min-height: 275px;
+  padding-top: 64px;
+  padding-left: 32px;
+  background: #333A44;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(0, 100%);
+}
+
+.header__mob-button {
+  position: absolute;
+  left: 32px;
+  bottom: 15px;
+}
+
+.header__button {
+  margin-left: auto;
+}
+
+@include breakpoint-down (1150px) {
+  .header__wrapper {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+@include breakpoint-down (750px) {
+  .header__wrapper {
+    padding-right: 0;
+    padding-left: 0;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .header__toggler-btn {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .header__logo-link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header__navbar {
+    display: none;
+  }
+
+  .header__button {
+    display: none;
+  }
+
+}
